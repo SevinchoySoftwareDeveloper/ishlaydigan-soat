@@ -1,0 +1,98 @@
+html,
+body {
+  height: 100%;
+  background-color: #facdcd;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0px auto;
+  max-width: 1200px;
+  padding-inline-start: 0px 15px;
+  min-height: 100vh;
+}
+.clock_hour {
+  width: 340px;
+  height: 340px;
+  background-image: url("https://png.pngtree.com/png-clipart/20220708/ourmid/pngtree-clock-face-no-hand-berkshire-swash-font-big-number-png-image_5778584.png");
+  background-size: cover;
+  background-position: top;
+  border-radius: 50%;
+  box-shadow: -3px 20px 20px 3px rgba(59, 59, 59, 0.5);
+}
+
+.clock_hour::before {
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 10000;
+}
+.clock_hour .hour,
+.clock_hour .min,
+.clock_hour .sec {
+  position: absolute;
+}
+.clock_hour .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+.clock_hour .min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+.clock_hour .sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  /* align-items: center;
+   */
+  position: absolute;
+  border-radius: 50%;
+}
+.hr::before {
+  content: " ";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: #ff105e;
+  z-index: 10;
+  border-radius: 6px 6px 0px 0px;
+}
+.mn::before {
+  content: " ";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #000;
+  z-index: 11;
+  border-radius: 6px 6px 0px 0px;
+}
+.sc::before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: rgb(15, 15, 126);
+  z-index: 12;
+  border-radius: 6px 6px 0px 0px;
+}
